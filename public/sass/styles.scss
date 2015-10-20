@@ -14,11 +14,24 @@ $break-desktop: 1200px;
   /*width:33%;*/
 }
 #map {
-  max-width: 100%;
+  width: 320px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-image: url("http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0");
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("//dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
+  }
+/*
+  @media screen and (max-width: $break-mobile) {
+    background-image: url("//dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
+  }
+*/
 }
+
 .r-section {
-  padding-right: 7px;
-  width: 50%;
+  padding-right: 5px;
+  width: 49%;
   float: left;
   @media screen and (max-width: $break-mobile) {
     width:100%;
