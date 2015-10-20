@@ -1,47 +1,71 @@
-/* line 3, ../sass/styles.scss */
+/* line 12, ../sass/styles.scss */
 body {
   box-sizing: border-box;
 }
+@media screen and (max-width: 648px) {
+  /* line 12, ../sass/styles.scss */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
 
-/* line 10, ../sass/styles.scss */
+/* line 20, ../sass/styles.scss */
 #sidebar {
-  /*width:33%;*/
+  background: -webkit-linear-gradient(0deg, rgba(0, 250, 0, 0.25), rgba(0, 250, 0, 0));
+  background: linear-gradient(0deg, rgba(0, 250, 0, 0.25), rgba(0, 250, 0, 0));
 }
 
-/* line 13, ../sass/styles.scss */
+/* line 23, ../sass/styles.scss */
 #main {
-  /*width:33%;*/
+  background: -webkit-linear-gradient(0deg, rgba(150, 0, 0, 0), rgba(150, 0, 0, 0.25));
+  background: linear-gradient(0deg, rgba(150, 0, 0, 0), rgba(150, 0, 0, 0.25));
 }
 
-/* line 16, ../sass/styles.scss */
+/* line 26, ../sass/styles.scss */
 #map {
   width: 320px;
   height: 180px;
   background-repeat: no-repeat;
   background-image: url("http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0");
-  /*
-    @media screen and (max-width: $break-mobile) {
-      background-image: url("//dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
-    }
-  */
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* line 16, ../sass/styles.scss */
+  /* line 26, ../sass/styles.scss */
   #map {
     background-image: url("//dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
   }
 }
+@media screen and (max-width: 322px) {
+  /* line 26, ../sass/styles.scss */
+  #map {
+    width: 314px;
+  }
+}
 
-/* line 32, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 .r-section {
-  padding-right: 5px;
-  width: 49%;
+  margin: 1px;
+  padding: 5px;
+  width: 48%;
+  min-width: 324px;
   float: left;
 }
-@media screen and (max-width: 800px) {
-  /* line 32, ../sass/styles.scss */
+@media screen and (max-width: 648px) {
+  /* line 41, ../sass/styles.scss */
   .r-section {
     width: 100%;
+    /*in device emulation mode, 100% is resulting tintoo large a width.*/
+    margin: 0;
+    float: none;
+  }
+}
+@media screen and (max-width: 322px) {
+  /* line 41, ../sass/styles.scss */
+  .r-section {
+    margin: 0;
+    padding: 2px;
+    min-width: 320px;
+    width: 320px;
     float: none;
   }
 }

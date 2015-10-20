@@ -1,17 +1,27 @@
+//noinspection CssUnknownTarget
 @import "breakpoint";
+
+$break-mobile: 648px;
+$break-smallest: 322px;
+
+@mixin twc-gradient($angle: null, $rgbaColors...) {
+  background: -webkit-linear-gradient($angle, $rgbaColors);
+  background: linear-gradient($angle, $rgbaColors);
+}
 
 body {
   box-sizing: border-box;
+  @media screen and (max-width: $break-mobile) {
+    margin: 0;
+    padding: 0;
+  }
 }
-
-$break-mobile: 800px;
-$break-desktop: 1200px;
 
 #sidebar {
-  /*width:33%;*/
+  @include twc-gradient(0deg, rgba(0,250,0,0.25), rgba(0,250,0,0));
 }
 #main {
-  /*width:33%;*/
+  @include twc-gradient(0deg, rgba(150,0,0,0), rgba(150,0,0,0.25));
 }
 #map {
   width: 320px;
@@ -22,20 +32,30 @@ $break-desktop: 1200px;
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url("//dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
   }
-/*
-  @media screen and (max-width: $break-mobile) {
-    background-image: url("//dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
+
+  @media screen and (max-width: $break-smallest) {
+    width: 314px;
   }
-*/
 }
 
 .r-section {
-  padding-right: 5px;
-  width: 49%;
+  margin: 1px;
+  padding: 5px;
+  width: 48%;
+  min-width: 324px;
   float: left;
+
   @media screen and (max-width: $break-mobile) {
-    width:100%;
+    width:100%; /*in device emulation mode, 100% is resulting tintoo large a width.*/
+    margin: 0;
     float: none;
   }
 
+  @media screen and (max-width: $break-smallest) {
+    margin: 0;
+    padding: 2px;
+    min-width: 320px;
+    width: 320px;
+    float: none;
+  }
 }
