@@ -33,7 +33,7 @@ angular.module('twc')
         element.bind("click", function(e){
           scope.headerArea = '';
           scope.$apply(function() {
-            scope.headerClass = 'silly';
+            scope.headerClass = (scope.headerClass === 'header')? 'silly':'header';
             $timeout(function () {                          //need some time for the div resize to happen
               scope.headerArea = sizeCalc.area(element[0]);
             }, 200);
