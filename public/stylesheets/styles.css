@@ -1,0 +1,33 @@
+/* line 3, ../sass/styles.scss */
+body {
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/styles.scss */
+#sidebar {
+  /*width:33%;*/
+}
+
+/* line 13, ../sass/styles.scss */
+#main {
+  /*width:33%;*/
+}
+
+/* line 16, ../sass/styles.scss */
+#map {
+  max-width: 100%;
+}
+
+/* line 19, ../sass/styles.scss */
+.r-section {
+  padding-right: 7px;
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 800px) {
+  /* line 19, ../sass/styles.scss */
+  .r-section {
+    width: 100%;
+    float: none;
+  }
+}

@@ -1,0 +1,28 @@
+@import "breakpoint";
+
+body {
+  box-sizing: border-box;
+}
+
+$break-mobile: 800px;
+$break-desktop: 1200px;
+
+#sidebar {
+  /*width:33%;*/
+}
+#main {
+  /*width:33%;*/
+}
+#map {
+  max-width: 100%;
+}
+.r-section {
+  padding-right: 7px;
+  width: 50%;
+  float: left;
+  @media screen and (max-width: $break-mobile) {
+    width:100%;
+    float: none;
+  }
+
+}
