@@ -59,3 +59,16 @@ body {
     float: none;
   }
 }
+.header {
+  @include twc-gradient(90deg, rgba(0,0,100,0.25), rgba(0,0,100,0));
+  font-size: inherit;
+  color: black;
+  font-weight: bold;
+  cursor: hand;
+}
+
+.silly {
+  @include twc-gradient(90deg, rgba(0,0,100,0), rgba(0,0,100,0.25));
+  font-size: xx-large;
+  color: red;
+}

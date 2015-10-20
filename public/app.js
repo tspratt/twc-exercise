@@ -1,6 +1,7 @@
 /**
  * Created by Tracy on 10/19/2015.
  */
+'use strict';
 angular.module('twc', ['ui.router'])
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
@@ -15,5 +16,5 @@ angular.module('twc', ['ui.router'])
       })
   })
   .run(function ($templateCache) {
-    $templateCache.put('twc-ex', '<label>exercise element: </label><input type="date" />');
+    $templateCache.put('headerTmpl.html', '<div ng-class="headerClass">{{appTitle}} Click Me! -- Header Area: {{headerArea}}</div>');
   });

@@ -69,3 +69,21 @@ body {
     float: none;
   }
 }
+
+/* line 62, ../sass/styles.scss */
+.header {
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 100, 0.25), rgba(0, 0, 100, 0));
+  background: linear-gradient(90deg, rgba(0, 0, 100, 0.25), rgba(0, 0, 100, 0));
+  font-size: inherit;
+  color: black;
+  font-weight: bold;
+  cursor: hand;
+}
+
+/* line 70, ../sass/styles.scss */
+.silly {
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 100, 0), rgba(0, 0, 100, 0.25));
+  background: linear-gradient(90deg, rgba(0, 0, 100, 0), rgba(0, 0, 100, 0.25));
+  font-size: xx-large;
+  color: red;
+}
